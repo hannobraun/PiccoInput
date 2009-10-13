@@ -61,7 +61,7 @@ trait Key
  * The KeyEvent class mentioned in the example is java.awt.event.KeyEvent from the Java standard library.
  */
 
-case class KeyMap(mappings: Map[Player, Map[Key, Int]]) {
+case class KeyMap( mappings: Map[Player, Map[Key, Int]] ) {
 
 	def this() {
 		this( new HashMap[Player, Map[Key, Int]] )
