@@ -4,5 +4,5 @@ Website: http://habraun.net
 PiccoInput is a small library written in Scala (http://scala-lang.org/). It acts as an event handler for input events from the Piccolo2D scene graph (Java version).
 PiccoInput hides the complexity of Piccolo's event-based input model and provides an API that allow you to easily poll for currently pressed keys from your main loop.
 
-PiccoInput was designed for rather simple games written in Scala. It is probably usable from Java, but the API has a certain "Scala smell" on it, so I don't think this would be a pleasant experience.
+PiccoInput was designed for rather simple games written in Scala. It is probably usable from Java, but the API has a certain "Scala smell" to it, so I don't think this would be a pleasant experience.
 
