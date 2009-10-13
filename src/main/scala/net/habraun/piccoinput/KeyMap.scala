@@ -47,16 +47,16 @@ trait Key
  *
  * // Now that we know our keys and our players we can define the mappings between players, keys and physical
  * // keys.
- * val keyMap = (new KeyMap)
- *         .addMapping(RedPlayer, LeftKey, KeyEvent.VK_A) // the 'a' key steers red player to the left
- *         .addMapping(RedPlayer, RightKey, KeyEvent.VK_D) // the 'd' key steers the red player to the right
- *         .addMapping(RedPlayer, FireKey, KeyEvent.VK_W) // red player fires with 'w' key
- *         .addMapping(BluePlayer, LeftKey, KeyEvent.VK_LEFT) // define left key for blue player
- *         .addMapping(BluePlayer, RightKey, KeyEvent.VK_RIGHT) // ...
- *         .addMapping(BluePlayer, FireKey, KeyEvent.VK_UP)
+ * val keyMap = ( new KeyMap )
+ *         .addMapping( RedPlayer, LeftKey, KeyEvent.VK_A ) // the 'a' key steers the red player left
+ *         .addMapping( RedPlayer, RightKey, KeyEvent.VK_D ) // the 'd' key steers the red player right
+ *         .addMapping( RedPlayer, FireKey, KeyEvent.VK_W ) // red player fires with 'w' key
+ *         .addMapping( BluePlayer, LeftKey, KeyEvent.VK_LEFT ) // the left key steers the blue player left
+ *         .addMapping( BluePlayer, RightKey, KeyEvent.VK_RIGHT ) // ...
+ *         .addMapping( BluePlayer, FireKey, KeyEvent.VK_UP )
  *
  * // Initialize the key handler.
- * val keyHandler = new KeyHandler(keyMap)
+ * val keyHandler = new KeyHandler( keyMap )
  *
  * The KeyEvent class mentioned in the example is java.awt.event.KeyEvent from the Java standard library.
  */
