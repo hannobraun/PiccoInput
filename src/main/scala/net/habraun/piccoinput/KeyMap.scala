@@ -25,8 +25,8 @@ import scala.collection.immutable.Map
 
 
 
-abstract class Player
-abstract class Key
+trait Player
+trait Key
 
 
 
