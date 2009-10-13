@@ -20,7 +20,8 @@ package net.habraun.piccoinput
 
 
 
-import scala.collection.immutable._
+import scala.collection.immutable.HashMap
+import scala.collection.immutable.Map
 
 
 
@@ -63,7 +64,7 @@ abstract class Key
 case class KeyMap(mappings: Map[Player, Map[Key, Int]]) {
 
 	def this() {
-		this(new HashMap[Player, Map[Key, Int]])
+		this( new HashMap[Player, Map[Key, Int]] )
 	}
 
 
@@ -75,8 +76,8 @@ case class KeyMap(mappings: Map[Player, Map[Key, Int]]) {
 	 * Please check the description of this class for usage examples.
 	 */
 
-	def addMapping(player: Player, key: Key, keyCode: Int): KeyMap = {
-		val keysForPlayer = if (mappings.contains(player)) mappings(player) else new HashMap[Key, Int]
-		KeyMap(mappings.update(player, keysForPlayer + (key -> keyCode)))
+	def addMapping( player: Player, key: Key, keyCode: Int ): KeyMap = {
+		val keysForPlayer = if ( mappings.contains( player ) ) mappings( player ) else new HashMap[Key, Int]
+		KeyMap( mappings.update( player, keysForPlayer + ( key -> keyCode ) ) )
 	}
 }

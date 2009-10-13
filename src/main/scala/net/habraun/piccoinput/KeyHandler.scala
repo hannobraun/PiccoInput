@@ -68,7 +68,7 @@ import edu.umd.cs.piccolo.event._
  * }
  */
 
-class KeyHandler(keyMap: KeyMap) {
+class KeyHandler( keyMap: KeyMap ) {
 
 	val handler = new PBasicInputEventHandler {
 
@@ -76,14 +76,14 @@ class KeyHandler(keyMap: KeyMap) {
 
 
 
-		override def keyPressed(event: PInputEvent) {
-			pressedKeys.addEntry(event.getKeyCode)
+		override def keyPressed( event: PInputEvent ) {
+			pressedKeys.addEntry( event.getKeyCode )
 		}
 
 
 
-		override def keyReleased(event: PInputEvent) {
-			pressedKeys.removeEntry(event.getKeyCode)
+		override def keyReleased( event: PInputEvent ) {
+			pressedKeys.removeEntry( event.getKeyCode )
 		}
 	}
 
@@ -93,9 +93,9 @@ class KeyHandler(keyMap: KeyMap) {
 	 * Returns true if a given key is pressed.
 	 */
 
-	def isPressed(player: Player, key: Key): Boolean = {
-		val keyCode = keyMap.mappings(player)(key)
-		handler.pressedKeys.contains(keyCode)
+	def isPressed( player: Player, key: Key ): Boolean = {
+		val keyCode = keyMap.mappings( player )( key )
+		handler.pressedKeys.contains( keyCode )
 	}
 
 
@@ -106,9 +106,9 @@ class KeyHandler(keyMap: KeyMap) {
 	 * None if the key is not pressed.
 	 */
 
-	def doIfPressed[R](player: Player, key: Key, action: () => R): Option[R] = {
-		if (isPressed(player, key))
-			Some(action())
+	def doIfPressed[R]( player: Player, key: Key, action: () => R ): Option[R] = {
+		if ( isPressed( player, key ) )
+			Some( action() )
 		else
 			None
 	}
