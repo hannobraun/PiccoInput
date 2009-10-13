@@ -77,13 +77,17 @@ class KeyHandler( keyMap: KeyMap ) {
 
 
 		override def keyPressed( event: PInputEvent ) {
-			pressedKeys.addEntry( event.getKeyCode )
+			pressedKeys.synchronized {
+				pressedKeys.addEntry( event.getKeyCode )
+			}
 		}
 
 
 
 		override def keyReleased( event: PInputEvent ) {
-			pressedKeys.removeEntry( event.getKeyCode )
+			pressedKeys.synchronized {
+				pressedKeys.removeEntry( event.getKeyCode )
+			}
 		}
 	}
 
@@ -94,8 +98,10 @@ class KeyHandler( keyMap: KeyMap ) {
 	 */
 
 	def isPressed( player: Player, key: Key ): Boolean = {
-		val keyCode = keyMap.mappings( player )( key )
-		handler.pressedKeys.contains( keyCode )
+		handler.pressedKeys.synchronized {
+			val keyCode = keyMap.mappings( player )( key )
+			handler.pressedKeys.contains( keyCode )
+		}
 	}
 
 
