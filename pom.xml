@@ -24,10 +24,9 @@
 		</license>
 	</licenses>
 
-	<!-- Source repository has not been created yet.
 	<scm>
 		<url>http://github.com/hbraun/PiccoInput/tree/master</url>
-	</scm> -->
+	</scm>
 
 	<properties>
 		<scala.version>2.7.3</scala.version>
