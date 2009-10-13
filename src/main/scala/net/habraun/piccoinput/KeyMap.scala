@@ -61,7 +61,7 @@ trait Key
  * The KeyEvent class mentioned in the example is java.awt.event.KeyEvent from the Java standard library.
  */
 
-case class KeyMap( mappings: Map[Player, Map[Key, Int]] ) {
+class KeyMap( val mappings: Map[Player, Map[Key, Int]] ) {
 
 	def this() {
 		this( new HashMap[Player, Map[Key, Int]] )
@@ -78,6 +78,6 @@ case class KeyMap( mappings: Map[Player, Map[Key, Int]] ) {
 
 	def addMapping( player: Player, key: Key, keyCode: Int ): KeyMap = {
 		val keysForPlayer = if ( mappings.contains( player ) ) mappings( player ) else new HashMap[Key, Int]
-		KeyMap( mappings.update( player, keysForPlayer + ( key -> keyCode ) ) )
+		new KeyMap( mappings.update( player, keysForPlayer + ( key -> keyCode ) ) )
 	}
 }
