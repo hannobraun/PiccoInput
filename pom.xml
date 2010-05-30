@@ -4,6 +4,8 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
+
+
 	<groupId>net.habraun</groupId>
 	<artifactId>piccoinput</artifactId>
 	<version>0.2-SNAPSHOT</version>
@@ -28,12 +30,16 @@
 		<url>http://github.com/hbraun/PiccoInput</url>
 	</scm>
 
+
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		
 		<scala.version>2.7.3</scala.version>
 	</properties>
+
+
 
 	<repositories>
 		<repository>
@@ -56,6 +62,8 @@
 			<url>http://scala-tools.org/repo-releases</url>
 		</pluginRepository>
 	</pluginRepositories>
+
+
 
 	<dependencies>
 		<!-- Compilation dependencies -->
@@ -109,6 +117,8 @@
 		</dependency>
 	</dependencies>
 
+
+
 	<build>
 		<sourceDirectory>src/main/scala</sourceDirectory>
 		<testSourceDirectory>src/test/scala</testSourceDirectory>
@@ -137,6 +147,8 @@
 		</plugins>
 	</build>
 
+
+
 	<reporting>
 		<plugins>
 			<plugin>
@@ -145,4 +157,5 @@
 			</plugin>
 		</plugins>
 	</reporting>
+	
 </project>
