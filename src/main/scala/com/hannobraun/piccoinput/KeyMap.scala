@@ -78,6 +78,6 @@ class KeyMap( val mappings: Map[Player, Map[Key, Int]] ) {
 
 	def addMapping( player: Player, key: Key, keyCode: Int ): KeyMap = {
 		val keysForPlayer = if ( mappings.contains( player ) ) mappings( player ) else new HashMap[Key, Int]
-		new KeyMap( mappings.update( player, keysForPlayer + ( key -> keyCode ) ) )
+		new KeyMap( mappings.updated( player, keysForPlayer + ( key -> keyCode ) ) )
 	}
 }
