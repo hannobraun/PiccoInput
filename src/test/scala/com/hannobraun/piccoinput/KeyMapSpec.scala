@@ -16,7 +16,7 @@
 
 
 
-package net.habraun.piccoinput
+package com.hannobraun.piccoinput
 
 
 
